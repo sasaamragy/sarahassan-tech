@@ -236,22 +236,24 @@ section h2::after {
 }
 
 /* --- التذييل والتواصل (Footer & Contact) --- */
+/* --- التذييل والتواصل (Footer & Contact) --- */
 footer {
     background-color: var(--bg-dark);
-    color: var(--bg-light);
+    color: var(--text-main);  /* تحويل النص الأساسي للأبيض */
     padding: 80px 8% 30px 8%;
     text-align: center;
     border-top: 4px solid var(--gold);
 }
 
 #contact h2 {
-    color: var(--bg-light);
+    color: #ffffff !important; /* إجبار العنوان على الظهور بالأبيض الصافي */
+    margin-bottom: 30px;
 }
 
 #contact p {
-    color: #cccccc;
+    color: #e0e0e0; /* رمادي فاتح منور للكلام */
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 #contact p:last-of-type {
@@ -262,7 +264,7 @@ footer {
 
 .copyright {
     font-size: 13px;
-    color: #555555;
+    color: #777777; /* رمادي هادي ومناسب للحقوق تحت */
     border-top: 1px solid #222222;
     padding-top: 25px;
 }
