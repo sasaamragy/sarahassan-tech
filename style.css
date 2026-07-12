@@ -1,0 +1,277 @@
+/* ==========================================================================
+   Sara Hassan Global Tech LLC - Premium Black, Gold & White Theme
+   ========================================================================== */
+
+/* إعادة ضبط القوانين العامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* متغيرات الألوان لسهولة التحكم */
+:root {
+    --bg-dark: #111111;       /* أسود فاخر */
+    --bg-light: #ffffff;      /* أبيض صافي */
+    --bg-alt: #f9f9f9;        /* رمادي ناعم جداً للخلفيات */
+    --gold: #d4af37;          /* ذهبي ملكي متوازن */
+    --gold-hover: #aa8c2c;    /* ذهبي داكن عند تمرير الماوس */
+    --text-main: #222222;     /* أسود كربوني للنصوص لراحة العين */
+    --text-muted: #666666;   /* رمادي للنصوص الجانبية */
+    --border-color: #e5e5e5;  /* خطوط فاصلة ناعمة */
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* --- القائمة العلوية (Header & Navigation) --- */
+header {
+    background-color: var(--bg-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--gold);
+}
+
+header .logo {
+    color: var(--bg-light);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header .logo span {
+    color: var(--gold);
+    font-weight: 300;
+}
+
+header nav a {
+    color: var(--bg-light);
+    text-decoration: none;
+    margin-left: 35px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--gold);
+}
+
+/* زر التواصل الذهبي في القائمة */
+header nav a.btn-gold {
+    border: 1px solid var(--gold);
+    padding: 8px 20px;
+    border-radius: 4px;
+    color: var(--gold);
+    transition: all 0.3s ease;
+}
+
+header nav a.btn-gold:hover {
+    background-color: var(--gold);
+    color: var(--bg-dark);
+}
+
+/* --- الواجهة الترحيبية (Hero Section) --- */
+#hero {
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1964') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    padding-top: 80px; /* مسافة لحماية الهيدر */
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    color: var(--bg-light);
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.hero-content p {
+    color: #cccccc;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+/* الزر الرئيسي الذهبي */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--gold);
+    color: var(--bg-dark);
+    text-decoration: none;
+    padding: 14px 35px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--gold-hover);
+    transform: translateY(-2px);
+}
+
+/* --- أقسام المحتوى العامة (Sections) --- */
+section {
+    padding: 100px 8%;
+}
+
+section h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* خط ذهبي مميز تحت العناوين الرئيسية */
+section h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: var(--gold);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* --- قطاعات الشركة (Core Domains) --- */
+#domains {
+    background-color: var(--bg-alt);
+}
+
+.domains-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.domain-card {
+    background-color: var(--bg-light);
+    padding: 40px 30px;
+    border-radius: 8px;
+    border-top: 4px solid var(--bg-dark);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.domain-card:hover {
+    transform: translateY(-5px);
+    border-top-color: var(--gold);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
+}
+
+.domain-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.domain-card p {
+    color: var(--text-muted);
+    font-size: 15px;
+}
+
+/* --- معرض المشاريع (Portfolio) --- */
+.project-card {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--gold);
+    padding: 35px;
+    border-radius: 6px;
+    margin-bottom: 35px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+.project-tag {
+    display: inline-block;
+    background-color: var(--bg-dark);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.project-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.project-card p strong {
+    color: var(--bg-dark);
+}
+
+/* --- التذييل والتواصل (Footer & Contact) --- */
+footer {
+    background-color: var(--bg-dark);
+    color: var(--bg-light);
+    padding: 80px 8% 30px 8%;
+    text-align: center;
+    border-top: 4px solid var(--gold);
+}
+
+#contact h2 {
+    color: var(--bg-light);
+}
+
+#contact p {
+    color: #cccccc;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#contact p:last-of-type {
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.copyright {
+    font-size: 13px;
+    color: #666666;
+    border-top: 1px solid #222222;
+    padding-top: 25px;
+}
+
+/* --- ملاءمة شاشات الموبايل (Responsive Design) --- */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 5%;
+    }
+    header nav {
+        display: none; /* هنا يمكن لاحقاً إضافة قائمة موبايل منبثقة */
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    section {
+        padding: 60px 5%;
+    }
+}
