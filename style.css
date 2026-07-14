@@ -268,18 +268,39 @@ footer {
     border-top: 1px solid #222222;
     padding-top: 25px;
 }
-
 /* --- ملاءمة شاشات الموبايل (Responsive Design) --- */
 @media (max-width: 768px) {
     header {
+        flex-direction: column; /* ترتيب اللوجو والقائمة تحت بعض */
+        gap: 15px;
         padding: 20px 5%;
+        text-align: center;
     }
+
     header nav {
-        display: none;
+        display: flex !important; /* إجبار القائمة على الظهور */
+        flex-direction: row; /* جعل اللينكات بجانب بعضها بتناسق */
+        flex-wrap: wrap; /* السماح بالالتفاف لو الشاشة صغيرة جداً */
+        justify-content: center;
+        gap: 15px;
+        margin-left: 0; /* إلغاء أي هوامش جانبية قديمة */
     }
+
+    header nav a {
+        font-size: 14px; /* حجم خط مناسب للموبايل */
+        margin-left: 10px; /* تقليل المسافات بين اللينكات لتناسب الشاشة */
+        margin-right: 10px;
+    }
+
+    header nav a.btn-gold {
+        padding: 6px 15px; /* تصغير حجم زرار التواصل ليناسب الموبايل */
+        font-size: 13px;
+    }
+
     .hero-content h1 {
         font-size: 32px;
     }
+
     section {
         padding: 60px 5%;
     }
