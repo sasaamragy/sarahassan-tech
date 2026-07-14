@@ -277,13 +277,13 @@ footer {
         text-align: center;
     }
 
-    header nav {
+   header nav {
         display: flex !important; /* إجبار القائمة على الظهور */
-        flex-direction: row; /* جعل اللينكات بجانب بعضها بتناسق */
-        flex-wrap: wrap; /* السماح بالالتفاف لو الشاشة صغيرة جداً */
-        justify-content: center;
-        gap: 15px;
-        margin-left: 0; /* إلغاء أي هوامش جانبية قديمة */
+        flex-direction: row !important; /* إجبار الصف على الموبايل */
+        flex-wrap: wrap !important; 
+        justify-content: center !important;
+        gap: 15px !important;
+        margin-left: 0 !important; 
     }
 
     header nav a {
